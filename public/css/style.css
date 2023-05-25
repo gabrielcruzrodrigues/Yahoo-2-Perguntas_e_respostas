@@ -1,0 +1,16 @@
+body {
+    background-color: #e7e7e7;
+}
+
+.logo {
+    max-width: 10%;
+    margin-left: 10px;
+}
+
+.container {
+    max-width: 80%;
+}
+
+#form-pergunta {
+    margin-top: 5vh;
+}

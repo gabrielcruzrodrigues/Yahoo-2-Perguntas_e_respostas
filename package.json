@@ -1,0 +1,17 @@
+{
+  "name": "plataforma-de-perguntas-e-respostas-com-mysql",
+  "version": "1.0.0",
+  "description": "Uma plataforma de perguntas e respostas ao estilo Yahoo respostas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js localhost 3000"
+  },
+  "author": "Gabriel Cruz Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
