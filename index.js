@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const router = require('./router/router.js');
-const port = 3000;
+const port = 3001;
 
 //definindo o ejs como view engine
 app.set('view engine', 'ejs');

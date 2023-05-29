@@ -6,4 +6,6 @@ router.get('/', PerguntasController.home);
 
 router.get('/perguntas', PerguntasController.perguntas);
 
+router.post('/salvarPergunta', PerguntasController.salvarPergunta);
+
 module.exports = router;
