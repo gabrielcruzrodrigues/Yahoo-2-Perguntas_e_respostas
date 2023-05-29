@@ -7,5 +7,8 @@ exports.perguntas = (req, res) => {
 };
 
 exports.salvarPergunta = (req, res) => {
-    res.send('Formulario enviado');
+    const titulo = req.body.titulo;
+    const descricao = req.body.descricao;
+
+    res.status(200).send(`${titulo}, ${descricao}`);
 }
