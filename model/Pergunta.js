@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const connection = require('../db/user.js');
 
-const Pergunta = connection.define('perguntas', {
+const Perguntas = connection.define('perguntas', {
     titulo:{
         type: Sequelize.STRING,
         allowNull: false
@@ -12,10 +12,12 @@ const Pergunta = connection.define('perguntas', {
     }
 });
 
-Pergunta.sync({force: false})
+Perguntas.sync({force: false})
     .then(() => {
         console.log('tabela criada!');
     })
     .catch((error) => {
         console.log(`ocorreu um erro ao criar a tabela ${error}`)
     });
+
+module.exports = Perguntas;
