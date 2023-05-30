@@ -1,7 +1,10 @@
 const PerguntasModel = require('../model/Pergunta.js');
 
 exports.home = (req, res) => {
-    res.render('home');
+    PerguntasModel.findAll({ raw: true })
+        .then((perguntas) => {
+            res.render('home', { perguntas: perguntas});
+        });
 };
 
 exports.perguntas = (req, res) => {
