@@ -1,3 +1,5 @@
+const PerguntaModel = require('../model/Pergunta.js');
+
 exports.home = (req, res) => {
     res.render('home');
 };
