@@ -1,7 +1,9 @@
 const PerguntasModel = require('../model/Pergunta.js');
 
 exports.home = (req, res) => {
-    PerguntasModel.findAll({ raw: true })
+    PerguntasModel.findAll({ raw: true, order:[
+        ['id', 'DESC']
+    ] })
         .then((perguntas) => {
             console.log(perguntas);
             res.render('home', { perguntas: perguntas});
