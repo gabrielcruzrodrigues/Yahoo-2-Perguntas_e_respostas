@@ -3,6 +3,7 @@ const PerguntasModel = require('../model/Pergunta.js');
 exports.home = (req, res) => {
     PerguntasModel.findAll({ raw: true })
         .then((perguntas) => {
+            console.log(perguntas);
             res.render('home', { perguntas: perguntas});
         });
 };
