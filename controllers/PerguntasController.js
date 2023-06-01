@@ -25,3 +25,17 @@ exports.salvarPergunta = (req, res) => {
         res.redirect('/');
     });
 };
+
+exports.buscarId = (req, res) => {
+    const id = req.params.id;
+    PerguntasModel.findOne({
+        where: {id: id}
+    })
+    .then((pergunta) => {
+        if (pergunta != undefined) {
+            res.render('pergunta', { pergunta: pergunta});
+        } else {
+            res.redirect('/');
+        };
+    });
+};
